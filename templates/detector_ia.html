@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Detecção de IA</title>
+</head>
+<body>
+  <h1>Resultado da Detecção de IA</h1>
+  <p><strong>Texto Analisado:</strong></p>
+  <blockquote>{{ texto }}</blockquote>
+  <h2>Resultado (JSON da API GPTZero):</h2>
+  <pre>{{ resultado | tojson(indent=2) }}</pre>
+  <hr>
+  <a href="/">Voltar</a>
+</body>
+</html>

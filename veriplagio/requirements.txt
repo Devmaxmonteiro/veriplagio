@@ -1,0 +1,6 @@
+Flask
+requests
+python-dotenv
+PyMuPDF
+python-docx
+werkzeug

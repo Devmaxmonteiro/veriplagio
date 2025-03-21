@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>VeriPlágio - Sistema Completo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background-color: #f8f9fa; }
+    .navbar-brand { font-weight: 700; }
+    .card { margin-bottom: 20px; border: none; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    footer { background-color: #343a40; color: #fff; padding: 20px 0; text-align: center; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">VeriPlágio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <div class="container my-5">
+    <h1 class="text-center mb-4">VeriPlágio - Sistema Completo</h1>
+
+    <div class="row">
+      <!-- Verificar Plágio -->
+      <div class="col-md-6">
+        <div class="card p-3">
+          <div class="card-body">
+            <h2 class="card-title">Verificar Plágio</h2>
+            <form action="/verificar_plagio" method="POST">
+              <div class="mb-3">
+                <textarea name="texto" class="form-control" rows="5" placeholder="Cole seu texto aqui"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Verificar Plágio</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detecção de IA -->
+      <div class="col-md-6">
+        <div class="card p-3">
+          <div class="card-body">
+            <h2 class="card-title">Detecção de IA (GPTZero)</h2>
+            <form action="/detectar_ia" method="POST">
+              <div class="mb-3">
+                <textarea name="texto" class="form-control" rows="5" placeholder="Cole seu texto para verificar se é gerado por IA"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Detectar IA</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <!-- Humanizar Texto -->
+      <div class="col-md-6">
+        <div class="card p-3">
+          <div class="card-body">
+            <h2 class="card-title">Humanizar Texto (DeepSeek)</h2>
+            <form action="/humanizar_texto" method="POST">
+              <div class="mb-3">
+                <textarea name="texto" class="form-control" rows="5" placeholder="Cole seu texto para reescrever"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Humanizar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparar Textos (SerpApi) -->
+      <div class="col-md-6">
+        <div class="card p-3">
+          <div class="card-body">
+            <h2 class="card-title">Comparar Textos (SerpApi)</h2>
+            <form action="/comparar_textos" method="POST">
+              <div class="mb-3">
+                <label class="form-label">Texto 1:</label>
+                <textarea name="text1" class="form-control" rows="3" placeholder="Texto 1"></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Texto 2:</label>
+                <textarea name="text2" class="form-control" rows="3" placeholder="Texto 2"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Comparar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 VeriPlágio. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle com Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
